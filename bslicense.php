@@ -1,3 +1,4 @@
+
 <?php 
 
 include_once 'header.php';
@@ -24,7 +25,7 @@ include_once 'header.php';
 				//copy img to images folder
 				if (copy($_FILES['avatar']['tmp_name'], $avatar_path)) {
 					
-					$_SESSION['username'] = $username;
+					$_SESSION['username'] = $username;groupInputs
 					$_SESSION['avatar'] = $avatar_path;
 
 					$sql = "INSERT INTO profile (username, email, pwd, avatar) VALUES ('$username','$email','$Password','$avatar_path')";
