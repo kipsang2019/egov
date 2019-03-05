@@ -1,0 +1,44 @@
+/*body*/
+body{
+	background-color: silver;
+}
+
+/*Main container*/
+.main-cont{
+	width: 100%;
+	background-color: #c2d6d6;
+	border-radius: 10px;
+}
+
+/*links*/
+ul{
+	background: black;
+	height: 50px;
+	border-radius: 10px;
+}
+
+ul li{
+	display: inline;
+	padding-left: 10px;
+	text-decoration: none;
+}
+
+ul li a{
+	text-decoration: none;
+	color: white;
+}
+
+/*footer*/
+.ft{
+	background-color: #f4514547
+}
+
+/*table*/
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-left: 40px;
+}
+th, td {
+    padding: 5px;
+}

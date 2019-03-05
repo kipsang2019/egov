@@ -8,9 +8,10 @@ session_start();
 <html>
 <head>
 	<title></title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
-	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
 </head>
 <body>
 
@@ -23,12 +24,14 @@ session_start();
 		 		echo '<ul>
 		 		<li><a href="index.php">Home</a></li>
 				<li><a href="e-services.php">E-services</a></li>
-				<li><a href="form.php">Projects</a></li>
-				<li><a href="#">sub-counties</a></li>
+				<li><a href="viewprojects.php">view all rojects</a></li>
+				<li><a href="pdf/jobspdf.php">view applied jobs</a></li>
+				<li><a href="profile.php">User profile</a></li>
 			</ul>';
 		 	}else{
 		 		echo '<ul>
-					<li></li> <a href="index.php">Home</a></li>
+					<li></li> <a href="../index.php">Home</a></li>
+					<li></li> <a href="admin/adminhome.php">Admin</a></li>
 				</ul>';
 		 	}
 
@@ -38,9 +41,7 @@ session_start();
 					<?php 
 
 					if (isset($_SESSION['u_id'])) {
-						echo '<form action="inc/logout.inc.php" method="POST">
-					 	<button class="btn btn-success" name="submit">Logout</button>
-					 </form>';
+						echo '';
 					}else{
 						echo '<form class="login-form" action="inc/login.inc.php" method="POST">
 						<input type="text" name="uid" placeholder="Username" required="required">

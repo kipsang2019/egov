@@ -10,6 +10,18 @@ if (isset($_POST['submit'])) {
 	$uid = mysqli_real_escape_string($conn, $_POST['uid']);
 	$pwd = mysqli_real_escape_string($conn, $_POST['pwd']);
 
+	require ("fpdf181/fpdf.php");
+	$pdf = new FPDF();
+	$pdf -> AddPage();
+	$pdf -> SetFont("Arial","B",16);
+	$pdf ->Cell(0, 10, "Welcome {$first}", 1 , 0);
+	$pdf ->Cell(50,  10, "Name: ", 1, 0);
+	$pdf ->Cell(50,  10, "$last", 1, 0);
+	$pdf ->Cell(50,  10, "$email: ", 1, 0);
+	$pdf ->Cell(50,  10, "$uid", 1, 0);
+	$pdf -> output();
+
+
 	//error handlers
 	//check for empty fields
 	if (empty($first) || empty($last) || empty($email) || empty($uid) || empty($pwd)) {

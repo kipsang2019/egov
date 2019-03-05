@@ -37,7 +37,10 @@ if (isset($_POST['submit'])) {
 					$_SESSION['u_email'] = $row['user_email'];
 					$_SESSION['u_uid'] = $row['user_uid'];
 
-					header("Location: ../index.php?login=success");
+					//display user details
+
+					header("Location: ../profile.php?login=success");
+					echo "Welcome ".$row['user_first'];
 					exit();
 				}
 			}
