@@ -11,18 +11,21 @@ session_start();
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="admin/style.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+	<script src="bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8" async defer></script>
 </head>
 <body>
 
+
 	<header class="flower">
 		<marquee direction='top'><h2 style="color: white; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px red;">County government of Trans-nzoia</h2></marquee>
-		<nav>
+		<nav class="main-nav">
 			<div class="main-wrapper">
 			<?php 
 		 	if (isset($_SESSION['u_id'])) {
 		 		echo '<ul>
-		 		<li><a href="index.php">Home</a></li>
+		 		<li><a href="index.php"><img style="width:3%;" src="images/home.png" alt="">Home</a></li>
 				<li><a href="e-services.php">E-services</a></li>
 				<li><a href="viewprojects.php">view all rojects</a></li>
 				<li><a href="pdf/jobspdf.php">view applied jobs</a></li>
@@ -30,23 +33,24 @@ session_start();
 			</ul>';
 		 	}else{
 		 		echo '<ul>
-					<li></li> <a href="../index.php">Home</a></li>
-					<li></li> <a href="admin/adminhome.php">Admin</a></li>
+					<li><a style="color:gold; font-size:20px;" href="index.php"><img style="width:4%;" src="images/home.png" alt=""> Home</a></li>
+					<li><a style="color:gold; font-size:20px;" href="admin/adminhome.php"><img style="width:4%;" src="images/Admin-icon.png" alt="">Admin</a></li>
 				</ul>';
 		 	}
 
 		 	 ?>
+
 				
 				<div class="nav-login">
 					<?php 
 
 					if (isset($_SESSION['u_id'])) {
-						echo '';
+						echo '<h1>Welcome user</h1>';
 					}else{
 						echo '<form class="login-form" action="inc/login.inc.php" method="POST">
 						<input type="text" name="uid" placeholder="Username" required="required">
 						<input type="password" name="pwd" placeholder="Password" required="required">
-						<button class="btn btn-success" name="submit">Login</button>
+						<button class="btn btn-primary" name="submit">Login</button>
 						<a href="signup.php">Signup</a>
 					</form>
 					';

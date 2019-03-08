@@ -1,11 +1,52 @@
 <?php 
 
 include_once 'header.php';
-
+include 'admin/dbcon.php';
 
  ?>
  	<a href="projproposal.php"> <<-Prev page</a>
  	<div id="bsform">
+	
+	<!-- Display of available jobs -->
+		<?php
+
+			$select = "SELECT * FROM uploadjobs";
+			$result = mysqli_query($conn, $select);
+
+		 ?>
+
+		 <h2 style="text-align: center;">THE COUNTY ASSEMBLY OF TRANS-NZOIA</h2>
+		 <h2 style="text-align: center;">ADVERTISEMENT</h2>
+
+		 <p>The County Assembly of Trans-Nzoia Service Board invites applications from suitably qualified candidates to fill the following <br> vacant positions:-</p>
+		 <table>
+		 	<thead>
+		 		<tr style="color: white; background-color: #334d4d; text-align: center;">
+		 			<th>No</th>
+					<th>Designation</th>
+					<th>Scale</th>
+					<th>No of posts</th>
+					<th>Advert No</th>
+				</tr>
+		 	</thead>
+		 	<tbody>
+		 		<?php
+
+		 			while ($row = mysqli_fetch_array($result)) {
+		 				echo "<tr><form>
+		 					<td>".$row['id']."</td>
+		 					<td>".$row['designation']."</td>
+		 					<td>".$row['scale']."</td>
+		 					<td>".$row['postsno']."</td>
+		 					<td>".$row['advertno']."</td>
+		 				</tr></form>";
+		 			}
+
+		 		 ?>
+		 	</tbody>
+		 </table> <a href="#">Download job specifications and requirements</a> <br>
+
+
  		<h2>Job application</h2>
  		
 		<form action="inc/jobs1.php" method="POST">

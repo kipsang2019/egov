@@ -10,6 +10,8 @@ session_start();
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title></title>
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css">
+	<script src="js/del.js" type="text/javascript" charset="utf-8" async defer></script>
 </head>
 <body>
 	<div class="main-cont">
@@ -25,7 +27,7 @@ session_start();
 		}else{
 			echo '<ul>
 				<li><a href="../index.php">Main page</a></li>
-			</ul>';
+				</ul>';
 		}
 
 		 ?>

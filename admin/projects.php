@@ -1,6 +1,6 @@
 <?php include 'header.php' ?>
-
-<h1>Projects panel</h1>
+<script src="..\del.js" type="text/javascript" charset="utf-8" async defer></script>
+<h1 style="text-align: center;">Projects panel</h1>
  <img style="width:20%; float: right;" src="../images/Person-Male-Light-icon.png" alt="">
 	<?php 
 		$conn = mysqli_connect('localhost','root','','test');
@@ -13,11 +13,11 @@
 		
 	 ?>
 		
-	<table>
+	<table style="margin-left: 10%;">
 		<caption style="color: blue;"><h2>PROPOSED PROJECTS FROM THE CITIZENS</h2></caption>
-		<a style="color: green;font-size: 20px;text-decoration: none;" href="../viewprojects.php" title="">Print full projetcs file</a>
+		<a style="margin-left: 10%;color: green;font-size: 20px;text-decoration: none;" href="../viewprojects.php" title="">Print</a>
 		
-		<thead style="width: 100%;">
+		<thead  style="width: 80%;">
 			<tr style="color: red; background-color: gold;">
 				<th style="background-color: #75a3a3;">PROJECT NO</th>
 				<th>FIRST NAME</th>
@@ -40,8 +40,8 @@
             	<td>".$row['project']."</td>
             	<td><input type='text' name='status' value='".$row['status']."'></td>
             	<td><input type='hidden' name='id' value='".$row['id']."'></td>
-            	<td><button type='submit' name='submit'><img style ='width:20px;' src='../images/apps (4).png'>Update</button></td>
-            	<td><button type='submit' name='delete'><img style ='width:20px;' src='../images/Close-icon.png'>Delete</button></td>
+            	<td><button class='btn btn-primary' type='submit' name='submit'><img style ='width:20px;' src='../images/apps (4).png'>Update</button></td>
+            	<td><button id='delete' onclick='click()' class='btn btn-danger' type='submit' name='delete'><img style ='width:20px;' src='../images/Close-icon.png'>Delete</button></td>
             	</form></tr>";
             }
 

@@ -1,17 +1,33 @@
 <?php 
 	include 'dbcon.php';
 	$msg = '';
+	if (isset($_POST['submit'])) {
+		$sql = "UPDATE jobs SET status='$_POST[status]' WHERE id='$_POST[id]'";
 
-	$sql = "UPDATE jobs SET subcounty='$_POST[subcounty]', ward='$_POST[ward]', pnumber='$_POST[pnumber]', degree='$_POST[degree]', school='$_POST[school]', course='$_POST[course]', jobselect='$_POST[jobselect]' WHERE id='$_POST[id]'";
-
-	//update
-	if ($record = mysqli_query($conn, $sql)) {
-		header("Location: jobs.php");
-		$msg = 'Updated successfully!!';
-		exit();
+		//update
+		if ($record = mysqli_query($conn, $sql)) {
+			header("Location: jobs.php");
+			$msg = 'Updated successfully!!';
+			exit();
+		}else{
+			echo "Could not update";
+		}
 	}else{
-		echo "Could not update";
+		//delete user
+		$sql1 = "DELETE FROM jobs WHERE id='$_POST[id]'";
+
+		//update
+		if ($record1 = mysqli_query($conn, $sql1)) {
+			header("Location: jobs.php");
+			$msg = 'deleted successfully!!';
+			exit();
+		}else{
+			echo "Could not delete";
+		}
 	}
+	
+	
+
 	
 
 

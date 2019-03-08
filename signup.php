@@ -12,7 +12,7 @@ include_once 'header.php';
 		 		<input type="text" name="email" placeholder="E-mail" required="required"><br><br>
 		 		<input type="text" name="uid" placeholder="Username" required="required"><br><br>
 		 		<input type="password" name="pwd" placeholder="Password" required="required"><br><br>
-		 		<button class="btn btn-success" name="submit">Signup</button>
+		 		<button class="btn btn-primary" name="submit">Signup</button>
 		 	</form>
 		 </div>
 	</section>
