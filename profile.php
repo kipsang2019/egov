@@ -32,11 +32,16 @@
 		
 		$sql = "SELECT * FROM proj_uploads";
 		$record = mysqli_query($conn, $sql);
+		$resultCheck = mysqli_num_rows($record);
 
-		$row = mysqli_fetch_array($record);
-		echo "<h4>";
-		echo $row['first']." your project suggestion is ". $row['status'];
-		echo "</h4>";
+		if ($resultCheck > 0) {
+			$row = mysqli_fetch_assoc($record);
+				echo "<h4>";
+				echo $row['first']." your project suggestion is ". $row['status'];
+				echo "</h4>";
+			
+		}
+		
 		
 		$sql1 = "SELECT * FROM license";
 		$record1 = mysqli_query($conn, $sql1);
