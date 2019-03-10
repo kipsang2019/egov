@@ -30,7 +30,7 @@
 		//select dbs
 		mysqli_select_db($conn, 'test');
 		
-		$sql = "SELECT * FROM proj_uploads";
+		$sql = "SELECT * FROM proj_uploads ";
 		$record = mysqli_query($conn, $sql);
 		$resultCheck = mysqli_num_rows($record);
 
