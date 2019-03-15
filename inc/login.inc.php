@@ -16,7 +16,7 @@ if (isset($_POST['submit'])) {
 		exit();
 	}else{
 		#check if username exists in the dbs
-		$sql = "SELECT * FROM users WHERE user_uid='$uid' OR user_email='$uid'";
+		$sql = "SELECT * FROM users WHERE uid='$uid' OR email='$uid'";
 		$result = mysqli_query($conn, $sql);
 		$resultcheck = mysqli_num_rows($result);
 		if ($resultcheck < 1) {
@@ -25,16 +25,18 @@ if (isset($_POST['submit'])) {
 		}else{
 			if ($row = mysqli_fetch_assoc($result)) {
 				#dehashing the password
-				$hashedpwdcheck = password_verify($pwd, $row['user_pwd']);
-				if ($hashedpwdcheck == false) {
-					header("Location: ../index.php?login=error");
+				
+				if ($pwd !== $row['pwd']) {
+					header("Location: ../index.php?login=error00");
 					exit();
-				}elseif($hashedpwdcheck == true) {
+				}elseif($pwd == $row['pwd']) {
 					#login the user
 					$_SESSION['u_id'] = $row['user_id'];
-					$_SESSION['u_first'] = $row['user_first'];
-					$_SESSION['u_last'] = $row['user_last'];
-					$_SESSION['u_email'] = $row['user_email'];
+					$_SESSION['u_first'] = $row['first'];
+					$_SESSION['u_last'] = $row['last'];
+					$_SESSION['u_idno'] = $row['idno'];
+					$_SESSION['u_subcounty'] = $row['subcounty'];
+					$_SESSION['u_email'] = $row['email'];
 					$_SESSION['u_uid'] = $row['user_uid'];
 
 					//display user details

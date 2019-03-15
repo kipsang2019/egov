@@ -6,25 +6,17 @@ if (isset($_POST['submit'])) {
 
 	$first = mysqli_real_escape_string($conn, $_POST['first']);
 	$last = mysqli_real_escape_string($conn, $_POST['last']);
+	$idno = mysqli_real_escape_string($conn, $_POST['idno']);
+	$subcounty = mysqli_real_escape_string($conn, $_POST['subcounty']);
 	$email = mysqli_real_escape_string($conn, $_POST['email']);
+	$conemail = mysqli_real_escape_string($conn, $_POST['conemail']);
 	$uid = mysqli_real_escape_string($conn, $_POST['uid']);
 	$pwd = mysqli_real_escape_string($conn, $_POST['pwd']);
-
-	require ("fpdf181/fpdf.php");
-	$pdf = new FPDF();
-	$pdf -> AddPage();
-	$pdf -> SetFont("Arial","B",16);
-	$pdf ->Cell(0, 10, "Welcome {$first}", 1 , 0);
-	$pdf ->Cell(50,  10, "Name: ", 1, 0);
-	$pdf ->Cell(50,  10, "$last", 1, 0);
-	$pdf ->Cell(50,  10, "$email: ", 1, 0);
-	$pdf ->Cell(50,  10, "$uid", 1, 0);
-	$pdf -> output();
-
+	$conpwd = mysqli_real_escape_string($conn, $_POST['conpwd']);
 
 	//error handlers
 	//check for empty fields
-	if (empty($first) || empty($last) || empty($email) || empty($uid) || empty($pwd)) {
+	if (empty($first) || empty($last) || empty($idno) || empty($email) || empty($conemail) || empty($uid) || empty($pwd) || empty($conpwd)) {
 		header("Location: ../signup.php?Signup=empty");
 		exit();
 	} else {
@@ -37,30 +29,41 @@ if (isset($_POST['submit'])) {
 			if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 				header("Location: ../signup.php?signup=invalid email");
 				exit();
-			} else {
-				#check if username is taken
-				$sql = "SELECT * FROM users WHERE user_id='$uid";
-				$result = mysqli_query($conn, $sql);
-				$resultCheck = mysqli_num_rows($result);
-
-				if ($resultCheck > 0) {
-					header("Location: ../signup.php?signup=user taken");
+			}else{
+				if ($conemail !== $email) {
+					header("Location: ../signup.php?signup=emails dont match!!");
 					exit();
-				} else {
-					#hashing the pwd
-					$hashedpwd = password_hash($pwd, PASSWORD_DEFAULT);
-					
-					#insert user into dbs
-					$sql = "INSERT INTO users (user_first, user_last, user_email, user_uid, user_pwd) 
-					VALUES ('$first','$last','$email','$uid','$hashedpwd');";
+				}else{
+					if ($conpwd !== $pwd) {
+						header("Location: ../signup.php?signup=passwords dont match!!");
+						exit();
+					}else{
+						//select * from users
+						#check if username is taken
+						$sql = "SELECT * FROM users WHERE user_id='$uid";
+						$result = mysqli_query($conn, $sql);
+						$resultCheck = mysqli_num_rows($result);
 
-					mysqli_query($conn, $sql);
-					header("Location: ../signup.php?signup=success");
-					exit();
+						if ($resultCheck > 0) {
+							header("Location: ../signup.php?signup=user taken");
+							exit();
+						} else {
+							
+							
+							#insert user into dbs
+							$sql = "INSERT INTO users (first, last, idno, subcounty, email, uid, pwd) 
+							VALUES ('$first','$last','$idno','$subcounty','$email','$uid','$pwd');";
+
+							mysqli_query($conn, $sql);
+							header("Location: ../signup.php?signup=success");
+							exit();
+						}
+					}
 				}
-			}
+			} 
 		}
 	}
+
 }else {
 	header("Location: ../signup.php");
 	exit();

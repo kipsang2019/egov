@@ -2,10 +2,10 @@
 include 'header.php';
 include 'dbcon.php';
 ?>	
-	
+	 
 		<img style="width:20%; float: right;" src="../images/Occupations-Bartender-Male-Light-icon.png" alt="">
 		<h2 style="margin-left: 20%;">INSERT VACANCIES</h2>
-		<table style="border: 5px groove  white;">
+		<table style="border: 5px groove  white;background-color: #99ffcc;">
 			
 			<thead>
 				<tr style="color: white; background-color: #1f2e2e; text-align: center;">
@@ -36,7 +36,7 @@ include 'dbcon.php';
 		 ?>
 
 		<h2 style="margin-left: 20%;">VACANCIES</h2>
-		 <table style="border: 5px groove  white;">
+		 <table style="border: 5px groove  white;background-color: #99ffcc;">
 		 	<thead>
 		 		<tr style="color: white; background-color: #1f2e2e; text-align: center;">
 		 			<th>No</th>
@@ -77,12 +77,14 @@ include 'dbcon.php';
 	 ?>
 	 <h1>Jobs application panel</h1>
 		
-	<table style="width: 70%;">
+	<table style="width: 70%;background-color: #99ffcc;">
 	<h2>APPLIED COUNTY JOBS</h2>
 		
 		
 		<thead>
-			<a style="color: green;font-size: 20px;text-decoration: none;" href="../pdf/jobspdf.php" title="">Print</a>
+			<form action="../pdf/jobspdf.php" method="POST">
+				<button class="btn btn-primary">Print</button>
+			</form>
 			<tr style="color: white; width: 80%; background-color: #1f2e2e;">
 				<th style="background-color: green;">NO</th>
 				<th>Name</th>

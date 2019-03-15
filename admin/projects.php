@@ -13,15 +13,13 @@
 		
 	 ?>
 		
+	<h2>PROPOSED PROJECTS FROM THE CITIZENS</h2>
 	<table style="margin-left: 10%;">
-		<caption style="color: blue;"><h2>PROPOSED PROJECTS FROM THE CITIZENS</h2></caption>
-		<a style="margin-left: 10%;color: green;font-size: 20px;text-decoration: none;" href="../viewprojects.php" title="">Print</a>
 		
 		<thead  style="width: 80%;">
 			<tr style="color: red; background-color: gold;">
-				<th style="background-color: #75a3a3;">PROJECT NO</th>
 				<th>FIRST NAME</th>
-				<th>LATS NAME</th>
+				<th>PHONE NUMBER</th>
 				<th>PROJECT NAME</th>
 				<th>STATUS</th>
 				<th></th>
@@ -34,7 +32,6 @@
 			<?php 
             while ($row = mysqli_fetch_array($record)) {
             	echo "<tr style='width: 100%;'><form action='updateproj.php' method='POST'>
-            	<td style='background-color: #75a3a3;'>".$row['id']."</td>
             	<td>".$row['first']."</td>
             	<td>".$row['Phonenumber']."</td>
             	<td>".$row['project']."</td>
@@ -49,5 +46,8 @@
 			
 		
 	</table>
+	<form style="margin-left:60%;" action="../viewprojects.php" method="POST">
+			<button class="btn btn-info">Print</button>
+	</form>
 
  <?php include 'footer.php' ?>

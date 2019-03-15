@@ -19,7 +19,7 @@ include 'admin/dbcon.php';
 		 <h2 style="text-align: center;">ADVERTISEMENT</h2>
 
 		 <p>The County Assembly of Trans-Nzoia Service Board invites applications from suitably qualified candidates to fill the following <br> vacant positions:-</p>
-		 <table>
+		 <table style="background-color: white;">
 		 	<thead>
 		 		<tr style="color: white; background-color: #1f2e2e; text-align: center;">
 		 			<th>No</th>

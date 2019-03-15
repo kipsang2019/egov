@@ -13,12 +13,12 @@ include 'projproposal1.php';
 		<div class="row">
 			<div class="col-6-xsmall">
 				<input type="text" name="first" placeholder="First name" />
-			</div><br>
+			</div><br><br>
 			<input type="radio" name="gender" value="Male">Male
 			<input type="radio" name="gender" value="Female">Female
 			<div class="col-6-xsmall">
 				<input type="number" name="Phonenumber" placeholder="Phone number" />
-			</div><br>
+			</div><br><br>
 			<div class="col-6-xsmall">
 				<select name="sub_county" value="Subcounty">
 					<option>Select Sub-county</option>
@@ -29,13 +29,13 @@ include 'projproposal1.php';
 					<option>Saboti</option>
 				</select>
 				
-			</div><br>
+			</div><br><br>
 			<div class="col-6-xsmall">
 				<input type="text" name="area" placeholder="Area/village" />
-			</div><br>
+			</div><br><br>
 			<div class="col-6-xsmall">
 				<input type="text" name="project" placeholder="Project name" />
-			</div><br>
+			</div><br><br>
 			<div class="col-6-xsmall">
 				<input type="file" name="image" />
 			</div>

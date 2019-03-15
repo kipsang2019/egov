@@ -22,6 +22,8 @@ session_start();
 			<li><a href="jobs.php">Jobs</a></li>
 			<li><a href="projects.php">Citizens projects</a></li>
 			<li><a href="countyproj.php">County projects</a></li>
+			<li><a href="permits.php">permits</a></li>
+			<li><a href="consapprovals.php">construction approvals</a></li>
 			</ul>
 			';
 		}else{

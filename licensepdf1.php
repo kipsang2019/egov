@@ -25,7 +25,7 @@
     $pdf -> AddPage();
     $pdf -> SetFont('Arial','B','12');
     $pdf -> Cell(160,20, 'COUNTY GOVERNMENT OF TRANS-NZOIA', 1, 1, 'C');
-    $pdf -> Cell(160,20, 'Single business license application', 1, 1, 'C');
+    $pdf -> Cell(160,20, 'Single business Permit application', 1, 1, 'C');
     
     $pdf -> SetFont('Arial','B','8');
     $pdf -> Cell(170,10, '', 2, 1);

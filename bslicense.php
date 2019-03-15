@@ -8,7 +8,7 @@ include_once 'header.php';
 <a href="projproposal.php">Next page ->></a>
 <div id="lice">
 
-	<h2>License of a single business</h2>
+	<h2>Permit of a single business</h2>
 	<h3>Make sure that you download the license form after submiting</h3>
 	<form action="licensepdf.php" method="POST" accept-charset="utf-8">
 		<input type="number" name="bs_id" placeholder="Business Id No.">

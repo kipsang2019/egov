@@ -27,7 +27,8 @@ session_start();
 		 		echo '<ul>
 		 		<li><a href="index.php"><img style="width:3%;" src="images/home.png" alt="">Home</a></li>
 				<li><a href="e-services.php">E-services</a></li>
-				<li><a href="viewprojects.php">view all rojects</a></li>
+				<li><a href="countyprojects.php">county rojects</a></li>
+				<li><a href="viewprojects.php">citizens rojects</a></li>
 				<li><a href="pdf/jobspdf.php">view applied jobs</a></li>
 				<li><a href="profile.php">User profile</a></li>
 			</ul>';
@@ -45,7 +46,7 @@ session_start();
 					<?php 
 
 					if (isset($_SESSION['u_id'])) {
-						echo '<h1>Welcome user</h1>';
+						echo '<h1 style="color:skyblue;">County E-Gov System</h1>';
 					}else{
 						echo '<form class="login-form" action="inc/login.inc.php" method="POST">
 						<input type="text" name="uid" placeholder="Username" required="required">
