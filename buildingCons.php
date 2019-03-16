@@ -1,8 +1,9 @@
 <?php include 'header.php'; ?>
 
 
-
+<a href="jobs.php"> <<-Prev page</a>
 <h1>Apply for Contruction approvals</h1>
+
 <table>
 	<form action="inc/buildingapproval.php" method="POST">
 		<thead>

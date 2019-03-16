@@ -5,6 +5,7 @@ include 'dbcon.php';
 	 
 		<img style="width:20%; float: right;" src="../images/Occupations-Bartender-Male-Light-icon.png" alt="">
 		<h2 style="margin-left: 20%;">INSERT VACANCIES</h2>
+
 		<table style="border: 5px groove  white;background-color: #99ffcc;">
 			
 			<thead>
@@ -18,6 +19,8 @@ include 'dbcon.php';
 			</thead>
 			<tbody>
 				<tr><form action="jobupload.php" method="POST">
+					<div class="alert alert-error">
+						<?php echo $msg ?></div>
 					<td><input type="text" name="designation"></td>
 					<td><input type="number" name="scale"></td>
 					<td><input type="number" name="postsno"></td>

@@ -1,8 +1,8 @@
 <?php 
-	$conn = mysqli_connect('localhost','root','','test');
-
+	$conn = mysqli_connect('localhost','root','','e-governance');
+	$_SESSION['msg'] = '';
 		//select dbs
-		mysqli_select_db($conn, 'test');
+		mysqli_select_db($conn, 'e-governance');
 
 	//delete user
 	$sql1 = "DELETE FROM proj_uploads WHERE id='$_POST[id]'";

@@ -1,13 +1,13 @@
 <?php 
 	
 	//dbs connection
-	$conn = mysqli_connect('localhost', 'root', '', 'test');
+	$conn = mysqli_connect('localhost', 'root', '', 'e-governance');
 
 	if (!$conn) {
 		echo "Could not connect";
 	}
 
-	if (!mysqli_select_db($conn, 'test')) {
+	if (!mysqli_select_db($conn, 'e-governance')) {
 		echo "Database not selected";
 	}
 
@@ -42,26 +42,6 @@
 		$pdf -> Cell(30,10, $row['status'] , 1, 1);
 	}
 
-	$sql = "SELECT * FROM users";
-	$results = mysqli_query($conn, $sql);
-	
-	$pdf -> AddPage();
-	$pdf -> SetFont('Arial','B','8');
-	$pdf -> Cell(170,10, 'Registered users', 1, 1, 'C');
-	$pdf -> Cell(20,10, 'No', 1, 0, 'C');
-	$pdf -> Cell(30,10, 'First name', 1, 0, 'C');
-	$pdf -> Cell(30,10, 'Last name', 1, 0, 'C');
-	$pdf -> Cell(60,10, 'E-mail', 1, 0, 'C');
-	$pdf -> Cell(30,10, 'Username', 1, 1, 'C');
-
-	$pdf -> SetFont('Arial','','8');
-	while ($row = mysqli_fetch_array($results)) {
-		$pdf -> Cell(20,10, $row['user_id'] , 1, 0, 'C');
-		$pdf -> Cell(30,10, $row['user_first'] , 1, 0, 'C');
-		$pdf -> Cell(30,10, $row['user_last'] , 1, 0, 'C');
-		$pdf -> Cell(60,10, $row['user_email'] , 1, 0, 'C');
-		$pdf -> Cell(30,10, $row['user_uid'] , 1, 1, 'C');
-	}
 	$pdf -> output();
 
  ?>

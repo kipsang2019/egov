@@ -3,10 +3,10 @@
 <h1 style="text-align: center;">Projects panel</h1>
  <img style="width:20%; float: right;" src="../images/Person-Male-Light-icon.png" alt="">
 	<?php 
-		$conn = mysqli_connect('localhost','root','','test');
+		$conn = mysqli_connect('localhost','root','','e-governance');
 
 		//select dbs
-		mysqli_select_db($conn, 'test');
+		mysqli_select_db($conn, 'e-governance');
 		
 		$sql = "SELECT * FROM proj_uploads";
 		$record = mysqli_query($conn, $sql);

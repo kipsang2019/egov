@@ -5,6 +5,7 @@ include 'admin/dbcon.php';
 
  ?>
  	<a href="projproposal.php"> <<-Prev page</a>
+ 	<a href="buildingCons.php"> Next page -->></a>
  	<div id="bsform">
 	
 	<!-- Display of available jobs -->

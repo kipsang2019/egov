@@ -1,11 +1,11 @@
 <?php
 
-	$db = mysqli_connect("localhost", "root", "", "test");
+	$db = mysqli_connect("localhost", "root", "", "e-governance");
 
-	if (isset($_POST['submit'])) {
-		$image = $_FILES['image']['name'];
+	if (isset($_POST['print'])) {
 
 		$first = mysqli_real_escape_string($db, $_POST['first']);
+		$gender = mysqli_real_escape_string($db, $_POST['gender']);
 	    $Phonenumber = mysqli_real_escape_string($db, $_POST['Phonenumber']);
 	    $sub_county = mysqli_real_escape_string($db, $_POST['sub_county']);
 	    $area = mysqli_real_escape_string($db, $_POST['area']);
@@ -42,7 +42,6 @@
 	    $pdf -> Cell(120,10, $image_text, 1, 1);
 
 	    $pdf -> Cell(40,20, 'I Would like the county government to consider my submission based on the above details.', 2, 1);
-	    $pdf -> output();
 	    $pdf -> output();
 	}
 	

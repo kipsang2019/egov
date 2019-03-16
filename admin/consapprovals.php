@@ -1,6 +1,6 @@
 <?php include 'header.php' ?>
 
-<h1>Construction approvals</h1>
+<h2>Building and construction approvals</h2>
 
 <?php 
 

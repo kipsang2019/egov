@@ -7,19 +7,39 @@ include 'projproposal1.php';
  <a href="jobs.php">Next page ->></a>
 <div id="projpro">
 	<h2>Submit your project suggestion</h2>
-<div style="color: red; font-size: 20px;"><?php echo $_SESSION['message'] ?></div>
 
-	<form action="projproposal1.php" method="POST" enctype="multipart/form-data">
-		<div class="row">
-			<div class="col-6-xsmall">
-				<input type="text" name="first" placeholder="First name" />
-			</div><br><br>
-			<input type="radio" name="gender" value="Male">Male
-			<input type="radio" name="gender" value="Female">Female
-			<div class="col-6-xsmall">
-				<input type="number" name="Phonenumber" placeholder="Phone number" />
-			</div><br><br>
-			<div class="col-6-xsmall">
+	<table>
+	<form action="projproposal1.php" method="POST">
+		<thead>
+		<tr style="color: white; background-color: #1f2e2e; text-align: center;">
+			<th>DETAILS</th>
+			<th>DESCRIPTIONS</th>
+		</tr>
+	</thead>
+	<thead>
+		<tr>
+			<th>First name</th>
+			<td><input type="text" name="first"></td>
+		</tr>
+	</thead>
+	<thead>
+		<tr>
+			<th>Gender</th>
+			<td><input type="radio" name="gender" value="male">Male
+				<input type="radio" name="gender" value="female">Female
+			</td>	
+		</tr>
+	</thead>
+	<thead>
+		<tr>
+			<th>Phone number</th>
+			<td><input type="number" name="Phonenumber"></td>
+		</tr>
+	</thead>
+	<thead>
+		<tr>
+			<th>Sub-county</th>
+			<td>
 				<select name="sub_county" value="Subcounty">
 					<option>Select Sub-county</option>
 					<option>Cherengani</option>
@@ -28,31 +48,52 @@ include 'projproposal1.php';
 					<option>Kiminini</option>
 					<option>Saboti</option>
 				</select>
-				
-			</div><br><br>
-			<div class="col-6-xsmall">
-				<input type="text" name="area" placeholder="Area/village" />
-			</div><br><br>
-			<div class="col-6-xsmall">
-				<input type="text" name="project" placeholder="Project name" />
-			</div><br><br>
-			<div class="col-6-xsmall">
-				<input type="file" name="image" />
-			</div>
-			<div>
-		      <textarea 
-		      	id="text" 
-		      	cols="40" 
-		      	rows="4" 
-		      	name="image_text" 
-		      	placeholder="Describe the current situation"></textarea>
-		  	</div>
-		</div><br>
-		<button type="submit" name="submit" class="btn btn-success">Submit</button>
-		
+			</td>
+		</tr>
+	</thead>
+	<thead>
+		<tr>
+			<th>Area/village</th>
+			<td><input type="text" name="area"></td>
+		</tr>
+	</thead>
+	<thead>
+		<tr>
+			<th>Project name</th>
+			<td><input type="text" name="project"></td>
+		</tr>
+	</thead>
+	<thead>
+		<tr>
+			<th>Describe project suggestion</th>
+			<td>
+				<textarea 
+			      	id="text" 
+			      	cols="40" 
+			      	rows="4" 
+			      	name="image_text">
+		      </textarea>
+			</td>
+		</tr>
+	</thead>
+	<thead>
+		<tr>
+			<th>Photo</th>
+			<td><input type="file" name="image"></td>
+		</tr>
+	</thead>
+	<thead>
+		<tr>
+			<th>Submit</th>
+			<td>
+				<button class="btn btn-primary" type="submit" name="submit">Submit</button>
+				<button class="btn btn-primary" type="submit" name="print">Print</button>
+			</td>
+		</tr>
+	</thead>
 	</form>
+</table><br><br>
 </div>
-
 
 	<?php
 include 'footer.php';
