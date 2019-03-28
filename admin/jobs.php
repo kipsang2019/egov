@@ -20,7 +20,6 @@ include 'dbcon.php';
 			<tbody>
 				<tr><form action="jobupload.php" method="POST">
 					<div class="alert alert-error">
-						<?php echo $msg ?></div>
 					<td><input type="text" name="designation"></td>
 					<td><input type="number" name="scale"></td>
 					<td><input type="number" name="postsno"></td>
@@ -37,8 +36,12 @@ include 'dbcon.php';
 			$result = mysqli_query($conn, $select);
 
 		 ?>
+		
 
 		<h2 style="margin-left: 20%;">VACANCIES</h2>
+		 <form action="../pdf/vacancies.php" method="POST">
+				<button class="btn btn-primary">Print</button>
+		</form>
 		 <table style="border: 5px groove  white;background-color: #99ffcc;">
 		 	<thead>
 		 		<tr style="color: white; background-color: #1f2e2e; text-align: center;">

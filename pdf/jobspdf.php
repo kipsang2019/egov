@@ -13,16 +13,18 @@
 	$pdf = new FPDF('p', 'mm', 'A4');
 	$pdf -> AddPage();
 	$pdf -> SetFont('Arial','B','8');
-	$pdf -> Cell(190,10, 'COUNTY GOVERNMENT OF TRANS-NZOIA', 1, 1, 'C');
-	$pdf -> SetFillColor(255,0);
-	$pdf -> Cell(190,10, 'Applicants', 1, 1, 'C');
-	$pdf -> Cell(10,10, 'No', 1, 0,'C');
-	$pdf -> Cell(25,10, 'Sub-county', 1, 0,'C');
-	$pdf -> Cell(25,10, 'Ward', 1, 0,'C');
-	$pdf -> Cell(25,10, 'Phone number', 1, 0,'C');
-	$pdf -> Cell(25,10, 'Degree?', 1, 0,'C');
-	$pdf -> Cell(35,10, 'Course', 1, 0,'C');
-	$pdf -> Cell(45,10, 'Applied job', 1, 1,'C');
+	$pdf -> SetFillColor(230,230,230);
+	$pdf -> Cell(190,10, 'COUNTY GOVERNMENT OF TRANS-NZOIA', 1, 1, 0, 'C');
+	$pdf -> Cell(190,10, 'Applicants', 1, 1, 0, 'C');
+
+	$pdf -> SetFillColor(100,180,180);
+	$pdf -> Cell(10,10, 'No', 1, 0, 0, 'B','C');
+	$pdf -> Cell(25,10, 'Sub-county', 1, 0, 0, 'B','C');
+	$pdf -> Cell(25,10, 'Ward', 1, 0, 0, 'B','C');
+	$pdf -> Cell(25,10, 'Phone number', 1, 0, 0, 'B','C');
+	$pdf -> Cell(25,10, 'Degree?', 1, 0, 0, 'B','C');
+	$pdf -> Cell(35,10, 'Course', 1, 0, 0, 'B','C');
+	$pdf -> Cell(45,10, 'Applied job', 1, 1, 0, 'B','C');
 
 	$pdf -> SetFont('Arial','','8');
 	while ($row = mysqli_fetch_array($results)) {
