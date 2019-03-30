@@ -20,11 +20,12 @@
 	
 	$pdf = new FPDF('p', 'mm', 'A3');
 	$pdf -> AddPage();
-	$pdf -> SetFont('Times','BU','14');
+	$pdf -> SetFont('Times','B','14');
 	$pdf -> SetTextColor(0, 102, 34);
 	$pdf -> SetFillColor(230, 230, 230);
-	$pdf -> Image('images/county.gif',10,5,40,0);
-	$pdf -> Image('images/county.gif',80,100,100,0);
+	$pdf -> Image('images/county.gif',110,5,40,0);
+	$pdf -> Image('images/county.png',80,100,100,0);
+	$pdf -> Cell(230,30, '', 0, 1, 'C');
 	$pdf -> Cell(230,10, 'COUNTY GOVERNMENT OF TRANS-NZOIA', 0, 1, 'C');
 	$pdf -> Cell(230,10, 'P.O. Box 4211-30200, Kitale', 0, 1, 'C');
 	$pdf -> Cell(230,10, 'Projects submited by the citizens to be considered by the county', 0, 1, 'C');
