@@ -33,11 +33,13 @@
       $sql = "INSERT INTO proj_uploads (first, gender, Phonenumber, sub_county, area, project, image_text, image) 
               VALUES ('$first', '$gender', '$Phonenumber','$sub_county', '$area', '$project','$image_text','$image')";
           // execute query
+
           mysqli_query($db, $sql);
-         
+          include 'subproj.php';
            $_SESSION['msg'] = 'Thank you '.$first.' Your submission was successfull!!';
           header("Location: projproposal.php?Upload=success");
           exit();
+          
     if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
       $msg = "Image uploaded successfully";
     }else{
@@ -45,11 +47,7 @@
     }
   }
   	
-}else{
-  if (isset($_POST['print'])) {
-     include 'subproj.php';
-  }
-
-
 }
+
+
 ?>

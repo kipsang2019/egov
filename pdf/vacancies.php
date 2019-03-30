@@ -23,7 +23,7 @@
 
 	//$pdf -> Cell(w, h, txt, border, ln, align, fill, link)
 	$pdf -> SetTextColor(0, 0, 0);
-	$pdf -> SetFillColor(160,160,160);
+	$pdf -> SetFillColor(255, 200, 102);
 	$pdf -> Cell(100,10, 'Designation', 1, 0, 0, 'B','C');
 	$pdf -> Cell(30,10, 'Scale', 1, 0, 0, 'B','C');
 	$pdf -> Cell(30,10, 'Post NO', 1, 0, 0, 'B','C');

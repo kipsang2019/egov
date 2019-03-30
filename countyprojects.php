@@ -10,8 +10,12 @@
 
   ?>
   <div class="main-cont">
+
   	<table style="margin-left: 10%;background-color: white;">
    	<h2 style="text-align: center;">Projects to be undertaken by the county</h2>
+   	<form action="admin/PDF/printcountyproj.php" method="POST">
+	 	<button style="margin-left: 10%; border-radius: 50%; height: 10%;" class="btn btn-success" name="submit">print</button>
+	 </form>
 	 	<thead>
 	 		<tr style="color: white; background-color: #1f2e2e; text-align: center;">
 	 			<th>Project</th>

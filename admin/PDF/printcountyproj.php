@@ -23,7 +23,7 @@
 	$pdf -> Cell(260,10, 'Projects to be undertaken by the county government', 0, 1, 0, 'C');
 
 	$pdf -> SetTextColor(0, 0, 0);
-	$pdf -> SetFillColor(100,180,180);
+	$pdf -> SetFillColor(255, 200, 102);
 	$pdf -> Cell(50,10, 'Project', 1, 0, 0, 'B','C');
 	$pdf -> Cell(30,10, 'Type', 1, 0, 0, 'B','C');
 	$pdf -> Cell(40,10, 'Developer', 1, 0, 0, 'B','C');

@@ -14,12 +14,17 @@
 	 ?>
 		
 	<h2>PROPOSED PROJECTS FROM THE CITIZENS</h2>
+	<form style="margin-left:10%;" action="../viewprojects.php" method="POST">
+			<button class="btn btn-info">Print</button>
+	</form>
 	<table style="margin-left: 10%;">
 		
 		<thead  style="width: 80%;">
 			<tr style="color: red; background-color: gold;">
 				<th>FIRST NAME</th>
 				<th>PHONE NUMBER</th>
+				<th>SUB-COUNTY</th>
+				<th>AREA/VILLAGE</th>
 				<th>PROJECT NAME</th>
 				<th>STATUS</th>
 				<th></th>
@@ -34,6 +39,8 @@
             	echo "<tr style='width: 100%;'><form action='updateproj.php' method='POST'>
             	<td>".$row['first']."</td>
             	<td>".$row['Phonenumber']."</td>
+            	<td>".$row['sub_county']."</td>
+            	<td>".$row['area']."</td>
             	<td>".$row['project']."</td>
             	<td><input type='text' name='status' value='".$row['status']."'></td>
             	<td><input type='hidden' name='id' value='".$row['id']."'></td>
