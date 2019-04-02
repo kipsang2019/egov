@@ -8,7 +8,7 @@
 
 
 	if (isset($_POST['update'])) {
-		$sql = "UPDATE countyprojetcs SET project='$_POST[project]',type='$_POST[type]',developer='$_POST[developer]',address='$_POST[address]',zone='$_POST[zone]',plotlocation='$_POST[plotlocation]',status='$_POST[status]' WHERE id='$_POST[id]'";
+		$sql = "UPDATE countyprojetcs SET project='$_POST[project]',type='$_POST[type]',developer='$_POST[developer]',address='$_POST[address]',zone='$_POST[zone]',plotlocation='$_POST[plotlocation]',cost='$_POST[cost]',status='$_POST[status]' WHERE id='$_POST[id]'";
 
 		//update
 		if ($record = mysqli_query($conn, $sql)) {

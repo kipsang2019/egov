@@ -4,10 +4,34 @@
 		 <?php
 		 	if (isset($_SESSION['u_id'])) {
 		 		echo '<h1 style="color:blue;text-align:center;">Admin Dashboard</h1>
+		 		<img style="width:10%; margin-left: 0%;" src="../images/Admin-icon.png" alt="">
+		 		<div class="adminbtns>
+		 			<form action="jobs.php" method="POST">
+					<button style="margin-left: 50%; border-radius: 50%; height: 10%;" class="btn btn-primary"><img style="width:10%;" src="../images/Occupations-Bartender-Male-Light-icon.png" alt="">jobs</button>
+				</form>
+				<form action="projects.php" method="POST">
+					<button style="margin-left: 30%; border-radius: 50%; height: 10%;" class="btn btn-info">Citizens projects <img style="width:10%;" src="../images/Users-icon.png" alt=""></button>
+				</form>
+				
+				<form action="countyproj.php" method="POST">
+					<button style="margin-left: 65%; border-radius: 50%; height: 10%;" class="btn btn-success"><img style="width:10%;" src="../images/county.png" alt="">county projects</button>
+				</form><br>
+				<form action="permits.php" method="POST">
+					<button style="margin-left: 40%; border-radius: 50%; height: 10%;" class="btn btn-danger"><img style="width:10%;" src="../images/apps (3).png" alt="">permits</button>
+				</form>
+				<form action="consapprovals.php" method="POST">
+					<button style="margin-left: 70%; border-radius: 50%; height: 10%;" class="btn btn-success"><img style="width:5%;" src="../images/home.png" alt="">construction approvals</button>
+				</form>
+		 		</div>
+		 		
+
+
 		 		<form action="logout.php" method="POST" accept-charset="utf-8">
 		 			 <button class="btn btn-danger" type="submit" name="submit">Logout</button>
-		 			 <img style="width:20%;" src="../images/Admin-icon.png" alt="">
-		 		</form>';
+		 			 
+		 		</form>
+
+		 		';
 		 	}else{
 		 		echo ' 
 		 		<h1 style="color:blue; text-align:center;">Admin Control Panel</h1>

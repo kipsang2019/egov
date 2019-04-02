@@ -15,13 +15,13 @@ if (isset($_SESSION['u_id'])){
 			<button style="margin-left: 10%; border-radius: 50%; height: 10%;" class="btn btn-success">Permit of a single business</button>
 		</form><br>
 		<form action="projproposal.php" method="POST">
-			<button style="margin-left: 10%; border-radius: 50%; height: 10%;" class="btn btn-primary">Submit project proposal</button>
+			<button style="margin-left: 20%; border-radius: 50%; height: 10%;" class="btn btn-primary">Submit project proposal</button>
 		</form><br>
 		<form action="jobs.php" method="POST">
-			<button style="margin-left: 10%; border-radius: 50%; height: 10%;" class="btn btn-info">Available county jobs</button>
+			<button style="margin-left: 30%; border-radius: 50%; height: 10%;" class="btn btn-info">Available county jobs</button>
 		</form><br>
 		<form action="buildingCons.php" method="POST">
-			<button style="margin-left: 10%; border-radius: 50%; height: 10%;" class="btn btn-danger">Building and construction approvals</button>
+			<button style="margin-left: 40%; border-radius: 50%; height: 10%;" class="btn btn-danger">Building and construction approvals</button>
 		</form><br>
 		
 		

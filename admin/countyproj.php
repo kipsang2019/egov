@@ -52,6 +52,12 @@
 	</thead>
 	<thead>
 		<tr>
+			<th>Cost</th>
+			<td><input type="text" name="cost"></td>
+		</tr>
+	</thead>
+	<thead>
+		<tr>
 			<th>Submit</th>
 			<td><button class="btn btn-primary" type="submit" name="submit"><img style ='width:25px;' src='../images/add.png'>Add</button></td>
 		</tr>
@@ -82,6 +88,7 @@
 	 			<th>Address</th>
 	 			<th>Zone</th>
 	 			<th>Plot location</th>
+	 			<th>Cost(KSH)</th>
 	 			<th>Status</th>
 	 			<th></th>
 	 			<th>Update</th>
@@ -99,6 +106,7 @@
 	 					<td><input type='text' name='address' value='".$row['address']."'></td>
 	 					<td><input type='text' name='zone' value='".$row['zone']."'></td>
 	 					<td><input type='text' name='plotlocation' value='".$row['plotlocation']."'></td>
+	 					<td><input type='text' name='cost' value='".$row['cost']."'></td>
 	 					<td><input type='text' name='status' value='".$row['status']."'></td>
 	 					<td><input type='hidden' name='id' value='".$row['id']."'></td>
 	 					<td><button class='btn btn-primary' type='submit' name='update'><img style ='width:15px;' src='../images/apps (4).png'>Update</button></td>
