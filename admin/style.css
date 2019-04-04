@@ -54,3 +54,36 @@ th, td {
 	float: right;
 	margin-left: 30%;
 }
+
+/*chatting*/
+
+#adminchatpanel{
+	width: 40%;
+	background-image: url('images/nai2.png');
+	width: 40%;
+	height: 500px;
+	border-radius: 10px;
+	overflow: scroll;
+}
+
+
+#chats{
+	background: rgba(153, 255, 255, 0.9);
+	width: 60%;
+	border-radius: 10px;
+	float: left;
+	color: black;
+	font-size: 13px;
+	font-style: italic;
+}
+
+#adminchats{
+	background: rgba(255, 255, 153, 0.9);
+	width: 60%;
+	border-radius: 10px;
+	float: right;
+	color: blue;
+	font-size: 13px;
+	font-style: italic;
+}
+

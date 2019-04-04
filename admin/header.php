@@ -11,7 +11,6 @@ session_start();
 	<title></title>
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css">
-	<script src="js/del.js" type="text/javascript" charset="utf-8" async defer></script>
 </head>
 <body>
 	<div class="main-cont">
@@ -24,6 +23,7 @@ session_start();
 			<li><a href="countyproj.php">County projects</a></li>
 			<li><a href="permits.php">permits</a></li>
 			<li><a href="consapprovals.php">construction approvals</a></li>
+			<li><a href="adminchat.php">Messages</a></li>
 			</ul>
 			';
 		}else{

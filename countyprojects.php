@@ -11,7 +11,7 @@
   ?>
   <div class="main-cont">
 
-  	<table style="margin-left: 10%;background-color: white;">
+  	<table style="background-color: white;">
    	<h2 style="text-align: center;">Projects to be undertaken by the county</h2>
    	<form action="admin/PDF/printcountyproj.php" method="POST">
 	 	<button style="margin-left: 10%; border-radius: 50%; height: 10%;" class="btn btn-success" name="submit">print</button>
@@ -26,6 +26,7 @@
 	 			<th>Plot location</th>
 	 			<th>Cost(KSH)</th>
 	 			<th>Status</th>
+	 			<th>Date</th>
 	 		</tr>
 	 	</thead>
 	 	<tbody>
@@ -41,6 +42,7 @@
 	 					<td>".$row['plotlocation']."</td>
 	 					<td>".$row['cost']."</td>
 	 					<td>".$row['status']."</td>
+	 					<td>".$row['date']."</td>
 	 				</form>
 	 				</tr>";
 	 			}
@@ -50,7 +52,7 @@
 	 	</tbody>
 	 </table><br><br>
 	
-	<table  style="margin-left: 10%;background-color: white;">
+	<table  style="background-color: white;">
 		<h2>The most expensive projects</h2>
 		<thead>
 			<tr style="color: white; background-color: #1f2e2e; text-align: center;">
@@ -62,6 +64,7 @@
 	 			<th>Plot location</th>
 	 			<th>Cost(KSH)</th>
 	 			<th>Status</th>
+	 			<th>Date</th>
 	 		</tr>
 		</thead>
 		<tbody>
@@ -89,6 +92,7 @@
 			 					<td>".$r['plotlocation']."</td>
 			 					<td>".$r['cost']."</td>
 			 					<td>".$r['status']."</td>
+			 					<td>".$r['date']."</td>
 			 				</form>
 			 				</tr>";
 

@@ -19,7 +19,7 @@ session_start();
 
 
 	<header class="flower">
-		<marquee direction='top'><h2 style="color: white; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px red;">County government of Trans-nzoia</h2></marquee>
+		<h2 style="color: white; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px red; text-align: center;">COUNTY GOVERNMENT OF TRANS-NZOIA</h2>
 		<nav class="main-nav">
 			<div class="main-wrapper">
 			<?php 
@@ -27,8 +27,8 @@ session_start();
 		 		echo '<ul>
 		 		<li><a href="index.php"><img style="width:3%;" src="images/home.png" alt="">Home</a></li>
 				<li><a href="e-services.php">E-services</a></li>
-				<li><a href="countyprojects.php">county rojects</a></li>
-				<li><a href="viewprojects.php">citizens rojects</a></li>
+				<li><a href="countyprojects.php">county projects</a></li>
+				<li><a href="citizensproj.php">citizens projects</a></li>
 				<li><a href="pdf/jobspdf.php">view applied jobs</a></li>
 				<li><a href="profile.php">User profile</a></li>
 			</ul>';
