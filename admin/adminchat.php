@@ -14,13 +14,14 @@
 
 			if ($resultCheck > 0) {
 				while ($row = mysqli_fetch_assoc($record)) {
+					echo "<br><br>";
 					if ($_SESSION['name'] = $row['name']) {
 						if ($row['name'] == 'Admin') {
 							echo "<br><br>";
 							echo "<div id='adminchats'>";
 								echo "<b>".$row['name']."</b><br>". $row['sendtext']."<br><br>". $row['date']."<br><br>";
 								
-							echo "</div><br>";
+							echo "</div><br><br>";
 							
 						}else{
 
@@ -28,7 +29,7 @@
 							echo "<div id='chats'>";
 								echo "<b>".$row['name']."</b><br>". $row['sendtext']."<br><br>". $row['date']."<br><br>";
 								
-							echo "</div><br>";
+							echo "</div><br><br>";
 
 							
 					}
@@ -45,7 +46,7 @@
 		
 		<form action="messages.php" method="POST">
 			
-			<textarea style="border-radius: 20px;" name="sendtext" placeholder="chat with county......" cols="40" rows="4"></textarea><br>
+			<textarea style="border-radius: 20px;" name="sendtext" placeholder="Reply citizens questions......" cols="40" rows="4"></textarea><br>
 			<button class="btn btn-primary" type="submit" name="submit">Send</button>
 		</form>
 

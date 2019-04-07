@@ -19,6 +19,7 @@ session_start();
 
 
 	<header class="flower">
+		<h2 style="color: white; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px red; text-align: center;">E-GOVERNANCE SYSTEM</h2>
 		<h2 style="color: white; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px red; text-align: center;">COUNTY GOVERNMENT OF TRANS-NZOIA</h2>
 		<nav class="main-nav">
 			<div class="main-wrapper">
@@ -46,7 +47,9 @@ session_start();
 					<?php 
 
 					if (isset($_SESSION['u_id'])) {
-						echo '<h1 style="color:skyblue;">County E-Gov System</h1>';
+						echo '
+						<img style="width:6%; margin-left:5%;" src="images/county.png" alt=""><h1 style="color:#ffff00; float:right;">County E-Gov System</h1>
+						';
 					}else{
 						echo '<form class="login-form" action="inc/login.inc.php" method="POST">
 						<input type="text" name="uid" placeholder="Username" required="required">

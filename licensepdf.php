@@ -2,7 +2,7 @@
 
     
   // Create database connection
-  $db = mysqli_connect("localhost", "root", "", "test");
+  $db = mysqli_connect("localhost", "root", "", "e-governance");
 
   if (isset($_POST['submit'])) {
     $bs_id = mysqli_real_escape_string($db, $_POST['bs_id']);

@@ -87,7 +87,6 @@ include 'projproposal1.php';
 			<th>Submit</th>
 			<td>
 				<button class="btn btn-primary" type="submit" name="submit">Submit</button>
-				<button class="btn btn-primary" type="submit" name="print">Print</button>
 			</td>
 		</tr>
 	</thead>

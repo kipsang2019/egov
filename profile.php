@@ -90,7 +90,7 @@
   <div class="main-cont">
 	<h2 style="color: red;">NOTIFICATIONS</h2>
   	<table style="background-color: white;">
-   	<h2 style="text-align: center;">Completed county projects</h2>
+   	<h2 style="text-align: center; color: red;">Completed county projects</h2>
 	 	<thead>
 	 		<tr style="color: white; background-color: #1f2e2e; text-align: center;">
 	 			<th>Project</th>
@@ -134,7 +134,7 @@
 
   ?>
 	 <table style="background-color: white;">
-   	<h2 style="text-align: center;">Uncompleted county projects</h2>
+   	<h2 style="text-align: center; color: red;">Uncompleted county projects</h2>
 	 	<thead>
 	 		<tr style="color: white; background-color: #1f2e2e; text-align: center;">
 	 			<th>Project</th>
@@ -178,7 +178,7 @@
 
   ?>
 	 <table style="background-color: white;">
-   	<h2 style="text-align: center;">Completed citizens projects</h2>
+   	<h2 style="text-align: center; color: red;">Completed citizens projects</h2>
 	 	<thead>
 	 		<tr style="color: white; background-color: #1f2e2e; text-align: center;">
 	 			<th>Name</th>
@@ -224,7 +224,7 @@
 
   ?>
 	 <table style="background-color: white;">
-   	<h2 style="text-align: center;">Uncompleted citizens projects</h2>
+   	<h2 style="text-align: center; color: red;">Uncompleted citizens projects</h2>
 	 	<thead>
 	 		<tr style="color: white; background-color: #1f2e2e; text-align: center;">
 	 			<th>Name</th>

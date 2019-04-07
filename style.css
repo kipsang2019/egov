@@ -1,6 +1,7 @@
 
 .flower{
-	background-image: url('images/bgm.png');
+	background: #b3b3b3;
+	background-repeat: no repeat;
 	border-radius: 10px;
 	width: 100%;
 	height: 70%;
@@ -21,7 +22,7 @@
 
 ul{
 	
-	margin-left: 90px;
+	
 	height: 10%;
 }
 
@@ -38,7 +39,6 @@ li {
 }
 
 .main-wrapper li a{
-	/*background-color: black;*/
 	text-decoration: none;
 	border-radius: 5px;
 	color: white;
@@ -50,13 +50,12 @@ li {
 	background-color: white;
 	color: black;
 	text-decoration: none;
-	border-radius: 10px;
+	height: 50px;
 }
 
 a {
 	font-size: 15px;
 	padding: 5px;
-	color: red;
 	margin-bottom: 20px;
 	text-transform: lowercase;
 	
@@ -68,7 +67,6 @@ a:hover {
 	background-color: white;
 	margin-bottom: 20px;
 	text-transform: lowercase;
-	
 }
 
 
@@ -143,7 +141,7 @@ a:hover {
 
 /*Profile*/
 #main-profpage {
-	background-color: pink;
+	
 	
 }
 
@@ -158,7 +156,6 @@ a:hover {
 	float: left;
 	width: 60%;
 	border-radius: 10px;
-	background-color: white;
 	height: 600px;
 	overflow: scroll;
 }
@@ -204,4 +201,9 @@ th, td {
 	color: blue;
 	font-size: 13px;
 	font-style: italic;
+}
+
+.main-cont{
+	background-image: url('images/kenya-economy.jpg');
+	
 }

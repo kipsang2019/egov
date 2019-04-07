@@ -45,7 +45,7 @@ include 'admin/dbcon.php';
 
 		 		 ?>
 		 	</tbody>
-		 </table> <a href="#">Download job specifications and requirements</a> <br>
+		 </table> <br>
 
 
  		<h2>Job application</h2>

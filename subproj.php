@@ -2,7 +2,7 @@
 
 	$db = mysqli_connect("localhost", "root", "", "e-governance");
 
-	if (isset($_POST['print'])) {
+	if (isset($_POST['submit'])) {
 
 		$first = mysqli_real_escape_string($db, $_POST['first']);
 		$gender = mysqli_real_escape_string($db, $_POST['gender']);

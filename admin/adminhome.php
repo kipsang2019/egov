@@ -2,7 +2,7 @@
 
 
 		 <?php
-		 	if (isset($_SESSION['u_id'])) {
+		 	if (isset($_SESSION['admin_id'])) {
 		 		echo '<h1 style="color:blue;text-align:center;">Admin Dashboard</h1>
 		 		<img style="width:10%; margin-left: 0%;" src="../images/Admin-icon.png" alt="">
 		 		<div class="adminbtns>
@@ -46,7 +46,7 @@
 		  ?>
 
 		  <?php
-		   if (isset($_SESSION['u_id'])) {
+		   if (isset($_SESSION['admin_id'])) {
 		  	echo '
 
 		';
