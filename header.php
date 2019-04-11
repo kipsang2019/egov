@@ -13,7 +13,6 @@ session_start();
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="admin/style.css">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
-	<script src="bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8" async defer></script>
 </head>
 <body>
 
@@ -21,6 +20,7 @@ session_start();
 	<header class="flower">
 		<h2 style="color: white; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px red; text-align: center;">E-GOVERNANCE SYSTEM</h2>
 		<h2 style="color: white; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px red; text-align: center;">COUNTY GOVERNMENT OF TRANS-NZOIA</h2>
+		<!----------<li><a href="pdf/jobspdf.php">view applied jobs</a></li>-------->
 		<nav class="main-nav">
 			<div class="main-wrapper">
 			<?php 
@@ -29,9 +29,9 @@ session_start();
 		 		<li><a href="index.php"><img style="width:3%;" src="images/home.png" alt="">Home</a></li>
 				<li><a href="e-services.php">E-services</a></li>
 				<li><a href="countyprojects.php">county projects</a></li>
-				<li><a href="citizensproj.php">citizens projects</a></li>
-				<li><a href="pdf/jobspdf.php">view applied jobs</a></li>
+				<li><a href="citizensproj.php">citizens projects</a></li>	
 				<li><a href="profile.php">User profile</a></li>
+				
 			</ul>';
 		 	}else{
 		 		echo '<ul>

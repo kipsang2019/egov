@@ -8,7 +8,7 @@ include 'inc/db.inc.php';
 	<section class="main-cont">
 		 <div class="main-wrapper">
 		 	<h2 style="text-align: center;">Welcome to Trans-Nzoia county</h2>
-		 	 <img style="margin-left: 40%;" src="images/county.png" alt="">
+		 	 <img style="margin-left: 40%; width: 20%;" src="images/COUNTY-LOGO-final.png" alt="">
 		 </div>
 		 
 		 <!-- Display of available jobs -->
@@ -19,8 +19,8 @@ include 'inc/db.inc.php';
 
 		 ?>
 
-		 <h2 style="text-align: center;">THE COUNTY ASSEMBLY OF TRANS-NZOIA</h2>
-		 <h2 style="text-align: center;">ADVERTISEMENT</h2>
+		 <h2 style="text-align: center;color:#ffff00; background: silver;">THE COUNTY ASSEMBLY OF TRANS-NZOIA</h2>
+		 <h2 style="text-align: center;color:#ffff00; background: silver;">ADVERTISEMENT</h2>
 
 		 <p>The County Assembly of Trans-Nzoia Service Board invites applications from suitably qualified candidates to fill the following <br> vacant positions:-</p>
 		 <table style="background-color: white; margin-left:20%;">
@@ -49,7 +49,15 @@ include 'inc/db.inc.php';
 		 		 ?>
 		 	</tbody>
 		 </table>
-		 <h3>You have to login into the system to access e-services and application of jobs</h3>
+		 <?php
+		 	if (!isset($_SESSION['u_id'])) {
+		 		echo "<h3 style='color:red;'>You have to login into the system to access e-services and application of jobs</h3>";
+		 	}else{
+		 		echo "<h3 style='color:red;'>Thank you for login. You can apply for these jobs under e-services</h3>";
+		 	}
+
+		   ?>
+		 
 	</section>
 
 <?php 

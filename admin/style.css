@@ -27,6 +27,12 @@ ul li a{
 	color: white;
 }
 
+ul li a:hover{
+	text-decoration: none;
+	color: red;
+	height: 50px;
+}
+
 /*footer*/
 .ft{
 	background-color: #f4514547

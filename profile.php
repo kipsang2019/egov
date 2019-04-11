@@ -31,12 +31,13 @@
 			//select dbs
 			mysqli_select_db($conn, 'e-governance');
 			
-			$sql = "SELECT * FROM messages ";
+			$sql = "SELECT * FROM messages";
 			$record = mysqli_query($conn, $sql);
 			$resultCheck = mysqli_num_rows($record);
 
 			if ($resultCheck > 0) {
 				while ($row = mysqli_fetch_assoc($record)) {
+					
 					if ($_SESSION['name'] = $row['name']) {
 						if ($row['name'] == 'Admin') {
 							echo "<br>";
@@ -47,7 +48,7 @@
 							
 						}else{
 
-							echo "<br>";
+							echo "<br><br>";
 							echo "<div id='chats'>";
 								echo "<b>".$row['name']."</b><br>". $row['sendtext']."<br><br>". $row['date']."<br><br>";
 								
@@ -71,7 +72,8 @@
 			<textarea style="border-radius: 20px;" name="sendtext" placeholder="chat with county......" cols="40" rows="4"></textarea><br>
 			<input type="text" name="citizenname" placeholder="Name"><br>
 			<button class="btn btn-primary" type="submit" name="submit">Send</button>
-		</form>
+		</form><br>
+		<button class="btn btn-primary" type="submit" name="submit">Show more messages</button>
 	</div>
 
 

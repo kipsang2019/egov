@@ -3,6 +3,8 @@
 session_start();
 
 if (isset($_POST['submit'])) {
+
+	$_SESSION['message'] = '';
 	
 	include 'db.inc.php';
 
@@ -13,6 +15,7 @@ if (isset($_POST['submit'])) {
 	#Check if inputs are empty
 	if (empty($uid) || empty($pwd)) {
 		header("Location: ../index.php?login=empty");
+		$_SESSION['message'] = 'some fields are empty';
 		exit();
 	}else{
 		#check if username exists in the dbs

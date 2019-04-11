@@ -23,7 +23,7 @@
 	//$pdf -> Image('..\..\images/county.png',100,170,130,40);
 	$pdf -> SetFont('Arial','B','10');
 	$pdf -> SetTextColor(0, 0, 0);
-	$pdf -> SetFillColor(255, 200, 102);
+	$pdf -> SetFillColor(200, 200, 200);
 	$pdf -> Cell(40,10, 'Project', 1, 0, 0, 'B','C');
 	$pdf -> Cell(20,10, 'Type', 1, 0, 0, 'B','C');
 	$pdf -> Cell(40,10, 'Developer', 1, 0, 0, 'B','C');
@@ -67,11 +67,11 @@
 	$pdf -> Ln(20);
 	$pdf -> SetFont('Times','B','10');
 	$pdf -> SetTextColor(25, 77, 51);
-	$pdf -> SetFillColor(230, 230, 230);
+	$pdf -> SetFillColor(200, 200, 200);
 	$pdf -> Cell(280,20, 'PROJECTS SUMMARY', 0, 1, 'C');
 	$pdf -> Cell(280,20, 'Expensive Projects', 1, 1, 'C');
 	$pdf -> SetTextColor(0, 0, 0);
-	$pdf -> SetFillColor(255, 200, 102);
+	$pdf -> SetFillColor(200, 200, 200);
 	$pdf -> Cell(40,10, 'Project', 1, 0, 0, 'B','C');
 	$pdf -> Cell(20,10, 'Type', 1, 0, 0, 'B','C');
 	$pdf -> Cell(40,10, 'Developer', 1, 0, 0, 'B','C');
@@ -136,7 +136,7 @@
 	$pdf -> SetTextColor(25, 77, 51);
 	$pdf -> Cell(280,20, 'Completed Projects', 1, 1, 'C');
 	$pdf -> SetTextColor(0, 0, 0);
-	$pdf -> SetFillColor(255, 200, 102);
+	$pdf -> SetFillColor(200, 200, 200);
 	$pdf -> Cell(40,10, 'Project', 1, 0, 0, 'B','C');
 	$pdf -> Cell(20,10, 'Type', 1, 0, 0, 'B','C');
 	$pdf -> Cell(40,10, 'Developer', 1, 0, 0, 'B','C');
@@ -185,7 +185,7 @@
 	$pdf -> SetTextColor(25, 77, 51);
 	$pdf -> Cell(280,20, 'Pending Projects', 1, 1, 'C');
 	$pdf -> SetTextColor(0, 0, 0);
-	$pdf -> SetFillColor(255, 200, 102);
+	$pdf -> SetFillColor(200, 200, 200);
 	$pdf -> Cell(40,10, 'Project', 1, 0, 0, 'B','C');
 	$pdf -> Cell(20,10, 'Type', 1, 0, 0, 'B','C');
 	$pdf -> Cell(40,10, 'Developer', 1, 0, 0, 'B','C');
